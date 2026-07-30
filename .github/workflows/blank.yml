@@ -30,8 +30,8 @@ jobs:
       - name: 1 Run a one-line script
         run: echo Hello, world1!
 
-      - name: 2 Run a python hello world script
-        run: python3 hello-world-python.py
-
-      - name: 3 Run dummy test
+      - name: 2 Run dummy test
         run: python3 tests.py
+
+      - name: 3 & 4 Run a python hello world script
+        run: python3 hello-world-python.py
