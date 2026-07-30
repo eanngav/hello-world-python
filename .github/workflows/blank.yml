@@ -32,3 +32,6 @@ jobs:
 
       - name: 2 Run a python hello world script
         run: python3 hello-world-python.py
+
+      - name: 3 Run dummy test
+        run: python3 tests.py
