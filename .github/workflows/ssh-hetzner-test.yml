@@ -1,10 +1,16 @@
-name: Test SSH
+name: Hetzner Test
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
 
 jobs:
-  test-ssh:
+  run-hetzner-test:
+
     runs-on: ubuntu-latest
 
     steps:
