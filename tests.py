@@ -1,6 +1,6 @@
 def test_dummy():
     value = 2 + 2
-    assert value == 3
+    assert value == 4
     print("test_dummy PASSED")
 
 
