@@ -1,0 +1,23 @@
+name: Test SSH
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-ssh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Execute remote command
+        uses: appleboy/ssh-action@v1.2.5
+        with:
+          host: 167.233.61.175
+          username: root
+          key: ${{ secrets.HETZNER_PRIVATE_SSH_KEY }}
+          script: |
+            echo "testing" >> /tmp/append.txt
+            cat /tmp/append.txt
+
+
+# how to ssh to hetzner server:
+# ssh -v -i ~/.ssh/id_ed25519_toannagavin root@167.233.61.175
